@@ -77,10 +77,7 @@ const Index = () => {
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {stats.map((s) => (
-                <div key={s.label} className="text-center">
-                  <AnimatedCounter end={s.end} suffix={s.suffix} label={s.label} />
-                  <div className="mt-2 text-sm text-primary-foreground/70 font-medium">{s.label}</div>
-                </div>
+                <AnimatedCounter key={s.label} end={s.end} suffix={s.suffix} label={s.label} />
               ))}
             </div>
           </div>
