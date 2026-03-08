@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Youtube } from "lucide-react";
+import { Mail, Phone, MapPin, Instagram, Youtube } from "lucide-react";
 import logo from "@/assets/dsc-logo.png";
 
 const Footer = () => {
@@ -50,7 +50,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-2 text-sm opacity-80">
                 <Mail size={16} className="shrink-0" />
-                <span>info@dscsociety.org</span>
+                <span>dscsociety2026@gmail.com</span>
               </div>
             </div>
           </div>
@@ -59,7 +59,7 @@ const Footer = () => {
           <div>
             <h4 className="font-heading font-semibold text-lg mb-4">Follow Us</h4>
             <div className="flex gap-3">
-              {[Facebook, Twitter, Instagram, Youtube].map((Icon, i) => (
+              {[ Instagram, Youtube].map((Icon, i) => (
                 <a key={i} href="#" className="w-10 h-10 rounded-full bg-primary-foreground/10 flex items-center justify-center hover:bg-primary-foreground/20 transition-colors">
                   <Icon size={18} />
                 </a>
