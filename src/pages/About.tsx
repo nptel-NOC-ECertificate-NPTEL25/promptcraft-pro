@@ -13,16 +13,15 @@ const coreValues = [
 ];
 
 const milestones = [
-  { year: "2023", title: "DSC Society Founded", desc: "Established in Guntur, Andhra Pradesh with a mission to combat plastic pollution." },
-  { year: "2024", title: "First Plastic Awareness Campaign", desc: "Launched large-scale awareness drives reaching over 50 communities." },
-  { year: "2025", title: "Expansion to Schools & Communities", desc: "Partnered with educational institutions and expanded across the state." },
+  { year: "2026", title: "DSC Society Founded", desc: "Established in Guntur, Andhra Pradesh by D.Sai Charan Gupta with a mission to combat plastic pollution." },
+ 
 ];
 
 const team = [
-  { name: "Rajesh Kumar", role: "Founder & President", bio: "Environmental activist with 10+ years of community leadership experience." },
-  { name: "Priya Sharma", role: "Vice President", bio: "Sustainability expert driving waste management and recycling initiatives." },
-  { name: "Anil Reddy", role: "Program Director", bio: "Youth development specialist leading skill training and workshops." },
-  { name: "Meera Devi", role: "Outreach Coordinator", bio: "Community organizer connecting volunteers with environmental campaigns." },
+  { name: "Sai Charn Gupta", role: "Founder & President", bio: "Scholar" },
+  { name: "RamaKanth", role: "Member", bio: "Scholar" },
+  { name: "Bharath", role: "Member", bio: "Scholar" },
+  
 ];
 
 const About = () => {
