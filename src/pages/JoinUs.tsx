@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { HandHeart, Award } from "lucide-react";
+import emailjs from "@emailjs/browser";
 import SectionFadeIn from "@/components/SectionFadeIn";
 import { toast } from "sonner";
 import hero2 from "@/assets/hero-2.jpg";
@@ -10,11 +11,48 @@ import hero2 from "@/assets/hero-2.jpg";
 const JoinUs = () => {
   const [activeTab, setActiveTab] = useState<"volunteer" | "internship">("volunteer");
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    toast.success("Application submitted successfully! We'll be in touch soon.");
-  };
+ const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
 
+  const form = e.currentTarget;
+
+  // Disable button to prevent spam clicks
+  const button = form.querySelector("button");
+  if (button) button.setAttribute("disabled", "true");
+
+  // 1️⃣ SEND TO ADMIN
+  emailjs.sendForm(
+    "service_7ok4c9d",
+    "template_zidkngd",
+    form,
+    "6nKwRNZVMwWXErdtY"
+  )
+  .then(() => {
+    console.log("Admin email sent");
+  })
+  .catch((error) => {
+    console.error("Admin email error:", error);
+  });
+
+  // 2️⃣ SEND AUTO REPLY TO USER
+  emailjs.sendForm(
+    "service_xxxxx",
+    "template_user",
+    form,
+    "public_key_xxxxx"
+  )
+  .then(() => {
+    toast.success("Application submitted successfully! Check your email.");
+    form.reset();
+  })
+  .catch((error) => {
+    toast.error("Failed to send confirmation email.");
+    console.error("User email error:", error);
+  })
+  .finally(() => {
+    if (button) button.removeAttribute("disabled");
+  });
+};
   return (
     <div className="pt-20">
       <section className="relative h-[50vh] min-h-[400px] overflow-hidden">
@@ -59,18 +97,29 @@ const JoinUs = () => {
                   <p className="text-muted-foreground mb-8">
                     Join DSC as a volunteer and participate in environmental campaigns, awareness programs, and community initiatives.
                   </p>
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <Input placeholder="Full Name" required className="bg-background" />
-                      <Input type="email" placeholder="Email Address" required className="bg-background" />
-                      <Input placeholder="Phone Number" required className="bg-background" />
-                      <Input placeholder="City" required className="bg-background" />
-                    </div>
-                    <Input placeholder="Area of Interest (e.g., tree plantation, waste management)" className="bg-background" />
-                    <Button type="submit" className="w-full gradient-green border-0 text-primary-foreground font-heading font-semibold text-base py-6">
-                      Submit Application
-                    </Button>
-                  </form>
+                 <form onSubmit={handleSubmit} className="space-y-4">
+  <div className="grid md:grid-cols-2 gap-4">
+
+    <Input name="user_name" placeholder="Full Name" required className="bg-background" />
+
+    <Input name="user_email" type="email" placeholder="Email Address" required className="bg-background" />
+
+    <Input name="phone" placeholder="Phone Number" required className="bg-background" />
+
+    <Input name="city" placeholder="City" required className="bg-background" />
+
+  </div>
+
+  <Input 
+    name="interest" 
+    placeholder="Area of Interest (e.g., tree plantation, waste management)" 
+    className="bg-background" 
+  />
+
+  <Button type="submit" className="w-full gradient-green border-0 text-primary-foreground font-heading font-semibold text-base py-6">
+    Submit Application
+  </Button>
+</form>
                 </>
               ) : (
                 <>
@@ -78,19 +127,32 @@ const JoinUs = () => {
                   <p className="text-muted-foreground mb-8">
                     Students can gain hands-on experience in environmental projects, community engagement, and sustainability initiatives.
                   </p>
-                  <form onSubmit={handleSubmit} className="space-y-4">
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <Input placeholder="Full Name" required className="bg-background" />
-                      <Input type="email" placeholder="Email Address" required className="bg-background" />
-                      <Input placeholder="College / University" required className="bg-background" />
-                      <Input placeholder="Course / Program" required className="bg-background" />
-                    </div>
-                    <Input placeholder="Preferred Duration (e.g., 3 months)" className="bg-background" />
-                    <Textarea placeholder="Statement of Interest — Tell us why you want to intern with DSC" rows={4} className="bg-background" />
-                    <Button type="submit" className="w-full gradient-green border-0 text-primary-foreground font-heading font-semibold text-base py-6">
-                      Submit Application
-                    </Button>
-                  </form>
+                 <form onSubmit={handleSubmit} className="space-y-4">
+  <div className="grid md:grid-cols-2 gap-4">
+
+    <Input name="user_name" placeholder="Full Name" required className="bg-background" />
+
+    <Input name="user_email" type="email" placeholder="Email Address" required className="bg-background" />
+
+    <Input name="college" placeholder="College / University" required className="bg-background" />
+
+    <Input name="course" placeholder="Course / Program" required className="bg-background" />
+
+  </div>
+
+  <Input name="duration" placeholder="Preferred Duration (e.g., 3 months)" className="bg-background" />
+
+  <Textarea 
+    name="message"
+    placeholder="Statement of Interest — Tell us why you want to intern with DSC"
+    rows={4}
+    className="bg-background"
+  />
+
+  <Button type="submit" className="w-full gradient-green border-0 text-primary-foreground font-heading font-semibold text-base py-6">
+    Submit Application
+  </Button>
+</form>
                 </>
               )}
             </div>
