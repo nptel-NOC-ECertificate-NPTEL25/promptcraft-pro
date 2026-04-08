@@ -11,47 +11,42 @@ import hero2 from "@/assets/hero-2.jpg";
 const JoinUs = () => {
   const [activeTab, setActiveTab] = useState<"volunteer" | "internship">("volunteer");
 
- const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
   e.preventDefault();
 
   const form = e.currentTarget;
+  const button = form.querySelector("button[type='submit']") as HTMLButtonElement;
 
-  // Disable button to prevent spam clicks
-  const button = form.querySelector("button");
-  if (button) button.setAttribute("disabled", "true");
+  if (button) button.disabled = true;
 
-  // 1️⃣ SEND TO ADMIN
-  emailjs.sendForm(
-    "service_7ok4c9d",
-    "template_zidkngd",
-    form,
-    "6nKwRNZVMwWXErdtY"
-  )
-  .then(() => {
+  try {
+    // ✅ 1. Send to admin
+    await emailjs.sendForm(
+      "service_7ok4c9d",
+      "template_zidkngd",
+      form,
+      "6nKwRNZVMwWXErdtY"
+    );
+
     console.log("Admin email sent");
-  })
-  .catch((error) => {
-    console.error("Admin email error:", error);
-  });
 
-  // 2️⃣ SEND AUTO REPLY TO USER
-  emailjs.sendForm(
-    "service_xxxxx",
-    "template_user",
-    form,
-    "public_key_xxxxx"
-  )
-  .then(() => {
+    // ⚠️ Replace with REAL values
+    await emailjs.sendForm(
+      "service_7ok4c9d",          // SAME service usually
+      "template_user_reply",      // your actual template
+      form,
+      "6nKwRNZVMwWXErdtY"
+    );
+
     toast.success("Application submitted successfully! Check your email.");
     form.reset();
-  })
-  .catch((error) => {
-    toast.error("Failed to send confirmation email.");
-    console.error("User email error:", error);
-  })
-  .finally(() => {
-    if (button) button.removeAttribute("disabled");
-  });
+
+  } catch (error) {
+    console.error("Email error:", error);
+    toast.error("Something went wrong. Try again.");
+  } finally {
+    if (button) button.disabled = false;
+  }
 };
   return (
     <div className="pt-20">
