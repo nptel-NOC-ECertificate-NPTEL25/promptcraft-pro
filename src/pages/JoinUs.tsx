@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { HandHeart, Award } from "lucide-react";
-import emailjs from "@emailjs/browser";
+import emailjs from '@emailjs/browser';
 import SectionFadeIn from "@/components/SectionFadeIn";
 import { toast } from "sonner";
 import hero2 from "@/assets/hero-2.jpg";
