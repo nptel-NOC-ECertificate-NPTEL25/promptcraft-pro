@@ -7,6 +7,11 @@ import SectionFadeIn from "@/components/SectionFadeIn";
 import { toast } from "sonner";
 import hero2 from "@/assets/hero-2.jpg";
 
+const SERVICE_ID = "service_7ok4c9d";
+const ADMIN_TEMPLATE_ID = "template_b7uziio";
+const PUBLIC_KEY = "6nKwRNZVMwWXErdtY";
+const VOLUNTEER_TEMPLATE = "template_648uwjw";
+const INTERNSHIP_TEMPLATE = "template_648uwjw";
 const SubmitButton = ({ isSubmitting }: { isSubmitting: boolean }) => (
   <Button
     type="submit"
@@ -27,64 +32,45 @@ const SubmitButton = ({ isSubmitting }: { isSubmitting: boolean }) => (
 const JoinUs = () => {
   const [activeTab, setActiveTab] = useState<"volunteer" | "internship">("volunteer");
   const [isSubmitting, setIsSubmitting] = useState(false);
-const handleSubmit = async (
-e: React.FormEvent<HTMLFormElement>
-) => {
 
-e.preventDefault();
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (isSubmitting) return;
 
-if(isSubmitting) return;
+    const form = e.currentTarget;
+    setIsSubmitting(true);
 
-const form=e.currentTarget;
+    try {
+      const emailjs = (await import("@emailjs/browser")).default;
 
-setIsSubmitting(true);
+     const selectedTemplate =
+  activeTab === "volunteer"
+    ? VOLUNTEER_TEMPLATE
+    : INTERNSHIP_TEMPLATE;
 
-try{
-
-const formData=
-Object.fromEntries(
-new FormData(form).entries()
+await emailjs.sendForm(
+  SERVICE_ID,
+  selectedTemplate,
+  form,
+  PUBLIC_KEY
 );
 
-const response=await fetch(
-"https://script.google.com/macros/s/AKfycby4AXlAbVo5ZjZ-tkHh-b_TJpt9w1wYRNz2kqfuKQyO99MjD1Y2OfwTsZCuBDrBaIkG/exec",
-{
-method:"POST",
-headers:{
-"Content-Type":"application/json"
-},
-body:JSON.stringify(formData)
-}
-);
+      try {
+        await emailjs.sendForm(SERVICE_ID, USER_REPLY_TEMPLATE_ID, form, PUBLIC_KEY);
+      } catch (replyError) {
+        console.warn("Auto-reply email failed:", replyError);
+      }
 
-const text=await response.text();
+      toast.success("Application submitted! You'll hear from us soon.");
+      form.reset();
+    } catch (error) {
+      console.error("Email error:", error);
+      toast.error("Submission failed. Please try again or contact us directly.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
-console.log("Apps Script Response:",text);
-
-if(text.trim()!=="OK"){
-throw new Error(text);
-}
-
-toast.success("Application submitted!");
-form.reset();
-
-}
-
-catch(error){
-
-console.error("Submission error:",error);
-
-toast.error(String(error));
-
-}
-
-finally{
-
-setIsSubmitting(false);
-
-}
-
-};
   return (
     <div className="pt-20">
       {/* Hero */}
