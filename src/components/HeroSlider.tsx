@@ -39,17 +39,7 @@ const HeroSlider = () => {
         </motion.div>
       </AnimatePresence>
 
-      {/* Content */}
-      <div className="relative z-10 flex h-full items-center justify-center">
-        <div className="container-narrow px-4 text-center">
-          /* <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.8 }}
-            className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight max-w-4xl mx-auto"
-          >
-            Building a Cleaner, Greener Future Through Youth Leadership
-          </motion.h1>
+     
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -57,7 +47,7 @@ const HeroSlider = () => {
             className="mt-6 text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto leading-relaxed"
           >
             Dharitree Samrakshana Chaitanyam Society empowers communities to fight plastic pollution, promote sustainability, and create lasting environmental change.
-          </motion.p> */
+          </motion.p> 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
