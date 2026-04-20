@@ -27,8 +27,7 @@ const SubmitButton = ({ isSubmitting }: { isSubmitting: boolean }) => (
 const JoinUs = () => {
   const [activeTab, setActiveTab] = useState<"volunteer" | "internship">("volunteer");
   const [isSubmitting, setIsSubmitting] = useState(false);
-
- const handleSubmit = async (
+const handleSubmit = async (
 e: React.FormEvent<HTMLFormElement>
 ) => {
 
@@ -60,8 +59,10 @@ body:JSON.stringify(formData)
 
 const text=await response.text();
 
-if(text!=="OK"){
-throw new Error("Submission failed");
+console.log("Apps Script Response:",text);
+
+if(text.trim()!=="OK"){
+throw new Error(text);
 }
 
 toast.success("Application submitted!");
@@ -71,9 +72,9 @@ form.reset();
 
 catch(error){
 
-console.error(error);
+console.error("Submission error:",error);
 
-toast.error("Submission failed");
+toast.error(String(error));
 
 }
 
