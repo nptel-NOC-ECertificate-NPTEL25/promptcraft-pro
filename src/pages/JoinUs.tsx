@@ -8,8 +8,8 @@ import { toast } from "sonner";
 import hero2 from "@/assets/hero-2.jpg";
 
 const SERVICE_ID = "service_7ok4c9d";
-const ADMIN_TEMPLATE_ID = "template_zidkngd";
-const USER_REPLY_TEMPLATE_ID = "template_user_reply"; // Replace with your actual template ID
+const ADMIN_TEMPLATE_ID = "template_b7uziio";
+const USER_REPLY_TEMPLATE_ID = "template_b7uziio"; // Replace with your actual template ID
 const PUBLIC_KEY = "6nKwRNZVMwWXErdtY";
 
 const SubmitButton = ({ isSubmitting }: { isSubmitting: boolean }) => (
