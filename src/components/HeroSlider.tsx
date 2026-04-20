@@ -40,14 +40,6 @@ const HeroSlider = () => {
       </AnimatePresence>
 
      
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.8 }}
-            className="mt-6 text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto leading-relaxed"
-          >
-            Dharitree Samrakshana Chaitanyam Society empowers communities to fight plastic pollution, promote sustainability, and create lasting environmental change.
-          </motion.p> 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
