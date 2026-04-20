@@ -9,9 +9,9 @@ import hero2 from "@/assets/hero-2.jpg";
 
 const SERVICE_ID = "service_7ok4c9d";
 const ADMIN_TEMPLATE_ID = "template_b7uziio";
-const USER_REPLY_TEMPLATE_ID = "template_b7uziio"; // Replace with your actual template ID
 const PUBLIC_KEY = "6nKwRNZVMwWXErdtY";
-
+const VOLUNTEER_TEMPLATE = "template_648uwjw";
+const INTERNSHIP_TEMPLATE = "template_648uwjw";
 const SubmitButton = ({ isSubmitting }: { isSubmitting: boolean }) => (
   <Button
     type="submit"
@@ -43,7 +43,17 @@ const JoinUs = () => {
     try {
       const emailjs = (await import("@emailjs/browser")).default;
 
-      await emailjs.sendForm(SERVICE_ID, ADMIN_TEMPLATE_ID, form, PUBLIC_KEY);
+     const selectedTemplate =
+  activeTab === "volunteer"
+    ? VOLUNTEER_TEMPLATE
+    : INTERNSHIP_TEMPLATE;
+
+await emailjs.sendForm(
+  SERVICE_ID,
+  selectedTemplate,
+  form,
+  PUBLIC_KEY
+);
 
       try {
         await emailjs.sendForm(SERVICE_ID, USER_REPLY_TEMPLATE_ID, form, PUBLIC_KEY);
