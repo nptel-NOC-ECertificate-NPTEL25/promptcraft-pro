@@ -1,16 +1,16 @@
 import { Shield, Recycle, Lightbulb, Heart, TreePine, Leaf, Droplets, BookOpen, Wrench, HeartPulse, Sparkles, Users } from "lucide-react";
 import SectionFadeIn from "@/components/SectionFadeIn";
-import hero1 from "@/assets/hero-1.jpg";
+import plant4 from "@/assets/plant4.jpeg";
 import hero2 from "@/assets/hero-2.jpg";
-import hero3 from "@/assets/hero-3.jpg";
-import hero4 from "@/assets/hero-4.jpg";
+import clean13 from "@/assets/clean13.jpeg";
+import clean12 from "@/assets/clean12.jpeg";
 
 const areas = [
   {
     icon: Shield,
     title: "Environmental Protection",
     desc: "We lead initiatives to protect and restore natural ecosystems through community-driven action.",
-    image: hero1,
+    image: plant4,
     points: ["Tree plantation drives", "Eco awareness programs", "Nature conservation campaigns"],
     subIcons: [TreePine, Leaf, Sparkles],
   },
@@ -18,7 +18,7 @@ const areas = [
     icon: Recycle,
     title: "Waste Management",
     desc: "Tackling plastic pollution and promoting circular economy principles at the community level.",
-    image: hero3,
+    image: clean13,
     points: ["Plastic reduction initiatives", "Recycling awareness", "Waste-to-resource innovation"],
     subIcons: [Droplets, Recycle, Wrench],
   },
@@ -34,7 +34,7 @@ const areas = [
     icon: Heart,
     title: "Health & Sanitation",
     desc: "Creating cleaner, healthier communities through hygiene awareness and sanitation initiatives.",
-    image: hero4,
+    image: clean12,
     points: ["Clean environment campaigns", "Community hygiene awareness", "Public sanitation initiatives"],
     subIcons: [HeartPulse, Droplets, Heart],
   },
