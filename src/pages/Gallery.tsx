@@ -42,7 +42,7 @@ const Gallery = () => {
   return (
     <div className="pt-20">
       <section className="relative h-[50vh] min-h-[400px] overflow-hidden">
-        <img src={hero5} alt="Gallery" className="absolute inset-0 w-full h-full object-cover" />
+        <img src={hero1} alt="Gallery" className="absolute inset-0 w-full h-full object-cover" />
         <div className="absolute inset-0 bg-dsc-dark/60" />
         <div className="relative z-10 flex h-full items-center justify-center">
           <div className="text-center">
