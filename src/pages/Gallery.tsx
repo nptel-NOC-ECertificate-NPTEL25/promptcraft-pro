@@ -7,6 +7,7 @@ import cloth1 from "@/assets/cloth1.jpeg";
 import cloth2 from "@/assets/cloth2.jpeg";
 import cloth3 from "@/assets/cloth3.jpeg";
 import cloth4 from "@/assets/cloth4.jpeg";
+import cloth4 from "@/assets/cloth4.jpeg";
 
 const categories = ["All", "Aasara Vedika", "Tree Plantation", "Zero Plastic Campaign", "Posters", "Papers Clips"];
 
@@ -15,8 +16,8 @@ const images = [
   { src: cloth2, category: "Aasara Vedika" },
   { src: cloth3, category: "Aasara Vedika" },
   { src: cloth4, category: "Aasara Vedika" },
-  { src: hero5, category: "Community Activities" },
-  { src: hero3, category: "Clean-up Drives" },
+  { src: hero1, category: "Community Activities" },
+  { src: hero1, category: "Clean-up Drives" },
   { src: hero2, category: "Workshops" },
   { src: hero4, category: "Workshops" },
   { src: hero1, category: "Community Activities" },
