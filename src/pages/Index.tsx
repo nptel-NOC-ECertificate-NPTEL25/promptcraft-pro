@@ -7,6 +7,12 @@ import SectionFadeIn from "@/components/SectionFadeIn";
 import hero2 from "@/assets/hero-2.jpg";
 import hero3 from "@/assets/hero-3.jpg";
 import hero4 from "@/assets/hero-4.jpg";
+import plant1 from "@/assets/plant1.jpeg";
+import plant3 from "@/assets/plant3.jpeg";
+import plant8 from "@/assets/plant8.jpeg";
+import cloth1 from "@/assets/cloth1.jpeg";
+import cloth2 from "@/assets/cloth1.jpeg";
+import cloth3 from "@/assets/cloth1.jpeg";
 
 const focusAreas = [
   { icon: Shield, title: "Environmental Protection", desc: "Tree plantation, eco-awareness and nature conservation campaigns." },
@@ -22,7 +28,7 @@ const stats = [
   { end: 800, suffix: "+", label: "Volunteers" },
 ];
 
-const galleryImages = [hero2, hero3, hero4, hero2, hero3, hero4];
+const galleryImages = [plant1, plant3, plant8, cloth1, cloth2, cloth3];
 
 const Index = () => {
   return (
