@@ -41,6 +41,12 @@ import paper9 from "@/assets/paper9.jpeg";
 import paper10 from "@/assets/paper10.jpeg";
 import paper11 from "@/assets/paper11.jpeg";
 import paper12 from "@/assets/paper12.jpeg";
+import poster1 from "@/assets/poster1.jpeg";
+import poster2 from "@/assets/poster2.jpeg";
+import poster3 from "@/assets/poster3.jpeg";
+import poster4 from "@/assets/poster4.jpeg";
+import poster5 from "@/assets/poster5.jpeg";
+
 
 const categories = ["All", "Aasara Vedika", "Tree Plantation", "Zero Plastic Campaign", "Posters", "Papers Clips"];
 
@@ -83,6 +89,11 @@ const images = [
   { src: paper10, category: "Papers Clips" },
   { src: paper11, category: "Papers Clips" },
   { src: paper12, category: "Papers Clips" },
+  { src: poster1, category: "Posters" },
+  { src: poster2, category: "Posters" },
+  { src: poster3, category: "Posters" },
+  { src: poster4, category: "Posters" },
+  { src: poster5, category: "Posters" },
 
   
 
