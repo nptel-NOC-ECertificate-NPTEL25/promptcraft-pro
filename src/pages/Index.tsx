@@ -11,8 +11,9 @@ import plant1 from "@/assets/plant1.jpeg";
 import plant3 from "@/assets/plant3.jpeg";
 import plant8 from "@/assets/plant8.jpeg";
 import cloth1 from "@/assets/cloth1.jpeg";
-import cloth2 from "@/assets/cloth1.jpeg";
-import cloth3 from "@/assets/cloth1.jpeg";
+import cloth2 from "@/assets/cloth2.jpeg";
+import cloth3 from "@/assets/cloth3.jpeg";
+import clean12 from "@/assets/clean12.jpeg";
 
 const focusAreas = [
   { icon: Shield, title: "Environmental Protection", desc: "Tree plantation, eco-awareness and nature conservation campaigns." },
@@ -28,7 +29,7 @@ const stats = [
   { end: 800, suffix: "+", label: "Volunteers" },
 ];
 
-const galleryImages = [plant1, plant3, plant8, cloth1, cloth2, cloth3];
+const galleryImages = [clean12,plant1, plant8, cloth1, cloth2, cloth3];
 
 const Index = () => {
   return (
