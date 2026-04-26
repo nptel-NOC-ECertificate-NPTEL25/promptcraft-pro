@@ -5,6 +5,7 @@ import hero2 from "@/assets/hero-2.jpg";
 import clean13 from "@/assets/clean13.jpeg";
 import clean12 from "@/assets/clean12.jpeg";
 import hero1 from "@/assets/hero-1.jpg";
+import sd1 from "@/assets/sd1.jpeg";
 
 const areas = [
   {
@@ -27,7 +28,7 @@ const areas = [
     icon: Lightbulb,
     title: "Skill Development",
     desc: "Empowering youth and women with skills for sustainable livelihoods and environmental leadership.",
-    image: hero2,
+    image: sd1,
     points: ["Training youth and women", "Environmental leadership programs", "Community workshops"],
     subIcons: [BookOpen, Users, Lightbulb],
   },
