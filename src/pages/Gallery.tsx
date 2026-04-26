@@ -7,7 +7,14 @@ import cloth1 from "@/assets/cloth1.jpeg";
 import cloth2 from "@/assets/cloth2.jpeg";
 import cloth3 from "@/assets/cloth3.jpeg";
 import cloth4 from "@/assets/cloth4.jpeg";
-import cloth4 from "@/assets/cloth4.jpeg";
+import plant1 from "@/assets/plant1.jpeg";
+import plant2 from "@/assets/plant2.jpeg";
+import plant3 from "@/assets/plant3.jpeg";
+import plant4 from "@/assets/plant4.jpeg";
+import plant5 from "@/assets/plant5.jpeg";
+import plant6 from "@/assets/plant6.jpeg";
+import plant7 from "@/assets/plant7.jpeg";
+import plant8 from "@/assets/plant8.jpeg";
 
 const categories = ["All", "Aasara Vedika", "Tree Plantation", "Zero Plastic Campaign", "Posters", "Papers Clips"];
 
@@ -16,14 +23,14 @@ const images = [
   { src: cloth2, category: "Aasara Vedika" },
   { src: cloth3, category: "Aasara Vedika" },
   { src: cloth4, category: "Aasara Vedika" },
-  { src: hero1, category: "Community Activities" },
-  { src: hero1, category: "Clean-up Drives" },
-  { src: hero2, category: "Workshops" },
-  { src: hero4, category: "Workshops" },
-  { src: hero1, category: "Community Activities" },
-  { src: hero5, category: "Tree Plantation" },
-  { src: hero2, category: "Clean-up Drives" },
-  { src: hero3, category: "Workshops" },
+  { src: plant1, category: "Tree Plantation" },
+  { src: plant2, category: "Tree Plantation" },
+  { src: plant3, category: "Tree Plantation" },
+  { src: plant4, category: "Tree Plantation" },
+  { src: plant5, category: "Tree Plantation" },
+  { src: plant6, category: "Tree Plantation" },
+  { src: plant7, category: "Tree Plantation" },
+  { src: plant8, category: "Tree Plantation" },
 ];
 
 const Gallery = () => {
