@@ -7,7 +7,7 @@ import hero3 from "@/assets/hero-3.jpg";
 import hero4 from "@/assets/hero-4.jpg";
 import hero5 from "@/assets/hero-5.jpg";
 
-const categories = ["All", "Clean-up Drives", "Workshops", "Community Activities", "Tree Plantation"];
+const categories = ["All", "Aasara Vedika", "Tree Plantation", "Zero Plastic Campaign", "Posters", "Papers Clips"];
 
 const images = [
   { src: hero2, category: "Community Activities" },
