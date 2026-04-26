@@ -3,17 +3,18 @@ import { X } from "lucide-react";
 import SectionFadeIn from "@/components/SectionFadeIn";
 import hero1 from "@/assets/hero-1.jpg";
 import hero2 from "@/assets/hero-2.jpg";
-import hero3 from "@/assets/hero-3.jpg";
-import hero4 from "@/assets/hero-4.jpg";
-import hero5 from "@/assets/hero-5.jpg";
+import cloth1 from "@/assets/cloth1.jpeg";
+import cloth2 from "@/assets/cloth2.jpeg";
+import cloth3 from "@/assets/cloth3.jpeg";
+import cloth4 from "@/assets/cloth4.jpeg";
 
 const categories = ["All", "Aasara Vedika", "Tree Plantation", "Zero Plastic Campaign", "Posters", "Papers Clips"];
 
 const images = [
-  { src: hero2, category: "Community Activities" },
-  { src: hero3, category: "Clean-up Drives" },
-  { src: hero4, category: "Tree Plantation" },
-  { src: hero1, category: "Tree Plantation" },
+  { src: cloth1, category: "Aasara Vedika" },
+  { src: cloth2, category: "Aasara Vedika" },
+  { src: cloth3, category: "Aasara Vedika" },
+  { src: cloth4, category: "Aasara Vedika" },
   { src: hero5, category: "Community Activities" },
   { src: hero3, category: "Clean-up Drives" },
   { src: hero2, category: "Workshops" },
