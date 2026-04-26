@@ -29,6 +29,18 @@ import clean11 from "@/assets/clean11.jpeg";
 import clean12 from "@/assets/clean12.jpeg";
 import clean13 from "@/assets/clean13.jpeg";
 import clean14 from "@/assets/clean14.jpeg";
+import paper1 from "@/assets/paper1.jpeg";
+import paper2 from "@/assets/paper2.jpeg";
+import paper3 from "@/assets/paper3.jpeg";
+import paper4 from "@/assets/paper4.jpeg";
+import paper5 from "@/assets/paper5.jpeg";
+import paper6 from "@/assets/paper6.jpeg";
+import paper7 from "@/assets/paper7.jpeg";
+import paper8 from "@/assets/paper8.jpeg";
+import paper9 from "@/assets/paper9.jpeg";
+import paper10 from "@/assets/paper10.jpeg";
+import paper11 from "@/assets/paper11.jpeg";
+import paper12 from "@/assets/paper12.jpeg";
 
 const categories = ["All", "Aasara Vedika", "Tree Plantation", "Zero Plastic Campaign", "Posters", "Papers Clips"];
 
@@ -59,6 +71,18 @@ const images = [
   { src: clean12, category: "Zero Plastic Campaign" },
   { src: clean13, category: "Zero Plastic Campaign" },
   { src: clean14, category: "Zero Plastic Campaign" },
+  { src: paper1, category: "Papers Clips" },
+  { src: paper2, category: "Papers Clips" },
+  { src: paper3, category: "Papers Clips" },
+  { src: paper4, category: "Papers Clips" },
+  { src: paper5, category: "Papers Clips" },
+  { src: paper6, category: "Papers Clips" },
+  { src: paper7, category: "Papers Clips" },
+  { src: paper8, category: "Papers Clips" },
+  { src: paper9, category: "Papers Clips" },
+  { src: paper10, category: "Papers Clips" },
+  { src: paper11, category: "Papers Clips" },
+  { src: paper12, category: "Papers Clips" },
 
   
 
