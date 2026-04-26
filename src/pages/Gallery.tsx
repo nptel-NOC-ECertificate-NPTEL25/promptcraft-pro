@@ -95,8 +95,13 @@ const Gallery = () => {
   const [filter, setFilter] = useState("All");
   const [lightbox, setLightbox] = useState<string | null>(null);
 
-  const filtered = filter === "All" ? images : images.filter((img) => img.category === filter);
+const excludedFromAll = ["Papers Clips", "Posters"];
 
+const filtered =
+  filter === "All"
+    ? images.filter((img) => !excludedFromAll.includes(img.category))
+    : images.filter((img) => img.category === filter);
+  
   return (
     <div className="pt-20">
       <section className="relative h-[50vh] min-h-[400px] overflow-hidden">
