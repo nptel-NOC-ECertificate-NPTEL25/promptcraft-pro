@@ -53,7 +53,7 @@ const Contact = () => {
                     {[
                       { icon: MapPin, label: "Address", value: "28-7-154, Guntur, Andhra Pradesh 522002" },
                       { icon: Phone, label: "Phone", value: "+91 9703342045" },
-                      { icon: Mail, label: "Email", value: "dscsociety2026@gmail.com" },
+                      { icon: Mail, label: "Email", value: "dscsociety.org@gmail.com" },
                     ].map((item) => (
                       <div key={item.label} className="flex items-start gap-4">
                         <div className="w-12 h-12 rounded-xl gradient-green flex items-center justify-center shrink-0">
