@@ -4,6 +4,7 @@ import plant4 from "@/assets/plant4.jpeg";
 import hero2 from "@/assets/hero-2.jpg";
 import clean13 from "@/assets/clean13.jpeg";
 import clean12 from "@/assets/clean12.jpeg";
+import hero1 from "@/assets/hero-1.jpg";
 
 const areas = [
   {
