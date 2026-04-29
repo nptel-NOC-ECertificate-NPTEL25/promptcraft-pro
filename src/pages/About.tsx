@@ -14,7 +14,8 @@ const coreValues = [
 
 const milestones = [
   { year: "2026", title: "DSC Society Founded", desc: "Established in Guntur, Andhra Pradesh by D.Sai Charan Gupta with a mission to combat plastic pollution." },
- 
+   { year: "2026 March", title: "Zero Plastic Campaign", desc: "The Acharya Nagarjuna University ." },
+
 ];
 
 const team = [
